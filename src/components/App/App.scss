@@ -1,0 +1,24 @@
+.App {
+  background-image: url('../../assets/glitter.jpg');
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  background-color: #000;
+
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: auto ;
+
+  h3 {
+    padding: 10px;
+  }
+}
+
