@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
+import { getMovie } from '../utils/Api'
+import { makeRandomNumber } from '../utils/helper'
 // import Loader from '../Loader/Loader'
 
 class App extends Component {
@@ -16,23 +18,12 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.getMovie()
-  }
-
-  getMovie = () => {
-    const url = "https://swapi.co/api/films"
-    fetch(url)
-      .then(response => response.json())
-      .then(results => this.setMovie(results.results))
-      .catch(error => console.log(error))
-  }
-
-  makeRandomNumber() {
-    return  Math.floor(Math.random() * (7))
+    getMovie()
+    .then(results => this.setMovie(results.results))
   }
 
   setMovie = (movies) => {
-    const randomMovie = this.makeRandomNumber()
+    const randomMovie = makeRandomNumber()
     this.setState({
       movie: movies[randomMovie]
     })
@@ -51,12 +42,8 @@ class App extends Component {
             <h3>Vehicles</h3>
           </nav>
         </header>
-          <marquee 
-            behavior="scroll" 
-            direction="up">
-            {title}....
-            {opening_crawl}
-            {release_date}
+          <marquee behavior="scroll" direction="up">
+          {opening_crawl} {title} {release_date}
           </marquee>
       </div>
     );
