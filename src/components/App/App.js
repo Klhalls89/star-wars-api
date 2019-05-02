@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
-import { getMovie } from '../utils/Api'
+import { fetchThis } from '../utils/Api'
 import { makeRandomNumber } from '../utils/helper'
 // import Loader from '../Loader/Loader'
 
@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    getMovie()
+    fetchThis("https://swapi.co/api/films")
     .then(results => this.setMovie(results.results))
   }
 

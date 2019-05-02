@@ -1,6 +1,7 @@
-export const getMovie = () => {
-  return fetch("https://swapi.co/api/films")
+import React from 'react';
+
+export const fetchThis = (url) => {
+  return fetch(url)
     .then(response => response.json())
-    .then(results => results)
     .catch(error => console.log(error))
 }
