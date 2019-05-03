@@ -1,0 +1,38 @@
+header {
+  display: grid;
+  align-items: center;
+  grid-template-areas: "logo ... favs";
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #000;
+
+  h1 {
+    grid-area: logo;
+    padding-left: 20px;
+  }
+
+  h3 {
+    text-align: right;
+    grid-area: favs;
+    font-size: 16px;
+    padding: 0 20px;
+
+    span {
+      margin: 5px;
+    }
+  }
+}
+
+nav {
+  margin: auto ;
+
+  button {
+    text-align: center;
+    font-size: 16px;
+    background-color: teal;
+    color: #fff;
+    border: 0px;
+    border-radius: 15px;
+    margin: 10px;
+  }
+}
+

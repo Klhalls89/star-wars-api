@@ -1,0 +1,20 @@
+.scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+
+.scroll {
+  position: relative;
+  transform: translateY(600px);
+  animation: scrolls 15s forwards;
+}
+
+@keyframes scrolls {
+  0% {
+    transform: translateY(600px);
+  }
+  100% {
+    transform: translateY(-500px);
+  }
+}
