@@ -1,13 +1,14 @@
 import React from 'react';
 import Card from '../Card/Card'
 
-const Vehicles = () => {
+const Favorites = (props) => {
+  console.log(props)
   return (
     <div>
-      Vehicles
+      Favorites
       <Card />
     </div>
   )
 }
 
-export default Vehicles;
+export default Favorites
