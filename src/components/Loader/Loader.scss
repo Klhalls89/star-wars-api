@@ -1,16 +1,16 @@
 .lds-hourglass {
-  display: inline-block;
-  position: relative;
   width: 64px;
   height: 64px;
+  margin: auto;
 }
+
 .lds-hourglass:after {
   content: " ";
   display: block;
   border-radius: 50%;
   width: 0;
   height: 0;
-  margin: 6px;
+  margin: auto;
   box-sizing: border-box;
   border: 26px solid #fff;
   border-color: #fff transparent #fff transparent;
@@ -28,3 +28,4 @@
   100% {
     transform: rotate(1800deg);
   }
+}

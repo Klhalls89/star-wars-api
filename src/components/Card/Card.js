@@ -1,10 +1,10 @@
 import React from 'react'
 
 const Card = (props) => {
-console.log('card', props)
+console.log('card', props.cardInfo)
   return(
     <div>
-      Card
+      {props.cardInfo}
     </div>
   )
 }

@@ -10,9 +10,9 @@ const Header = (props) => {
       </header>
       <main>
         <nav>
-          <button onClick={(e) => props.changePage(e)}>People</button>
-          <button onClick={(e) => props.changePage(e)}>Planets</button>
-          <button onClick={(e) => props.changePage(e)}>Vehicles</button>
+          <button onClick={props.getPeople}>People</button>
+          <button onClick={() => {}}>Planets</button>
+          <button onClick={() => {}}>Vehicles</button>
         </nav>
         <p>select a button</p>
       </main>

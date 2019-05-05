@@ -5,3 +5,5 @@ export const fetchThis = (url) => {
     .then(response => response.json())
     .catch(error => console.log(error))
 }
+
+export default {fetchThis}

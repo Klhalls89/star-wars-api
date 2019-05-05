@@ -1,8 +1,9 @@
 import React from 'react';
+import './Loader.scss'
 
 function Loader() {
   return(
-    <div class="loading-hourglass">I</div>
+    <div class="lds-hourglass"></div>
   )
 }
 
