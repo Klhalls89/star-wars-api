@@ -1,9 +1,8 @@
 import React from 'react'
 
 const Card = (props) => {
-console.log('card', props.cardInfo)
   return(
-    <div>
+    <div className="card">
       {props.cardInfo}
     </div>
   )

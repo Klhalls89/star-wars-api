@@ -1,4 +1,5 @@
 import React from 'react';
+import './pages.scss'
 import Card from '../Card/Card'
 
 const People = (props) => {
@@ -14,7 +15,7 @@ const People = (props) => {
      )
   })
   return (
-    <div>
+    <div className="cardDiv">
       <Card cardInfo={allPeople}/>  
     </div>
   )
