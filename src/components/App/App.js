@@ -26,7 +26,6 @@ class App extends Component {
   }
 
   componentDidMount(){
-    console.log('Hello')
     Api.fetchThis("https://swapi.co/api/films")
     .then(results => this.setMovie(results.results))
   }
@@ -51,7 +50,6 @@ class App extends Component {
     }
  
   getEachSpecies = (people) => {
-    console.log('getEachSpecies',people)
     let eachSpecies = people.results.map((person) => {
     return Api.fetchThis(person.species)
       .then(species => ({...person, species: species.name, language: species.language}))
@@ -61,7 +59,6 @@ class App extends Component {
   }
 
   getEachPlanet = (people) => {
-    console.log('getEachPlanet',people)
     let eachPlanet = people.map((person) => {
     return Api.fetchThis(person.homeworld)
       .then(homeworld => ({...person, homeworld: homeworld.name, population: homeworld.population}))
@@ -71,7 +68,6 @@ class App extends Component {
   }
 
   setPeople = (people) => {
-    console.log('in set people',people)
     this.setState({people,
       loader:false,
       page: "People"
